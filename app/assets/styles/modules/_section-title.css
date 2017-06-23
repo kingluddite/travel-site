@@ -19,7 +19,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
 
     @mixin atSmall {
       position: relative;
