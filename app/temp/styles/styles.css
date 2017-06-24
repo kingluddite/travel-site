@@ -1119,14 +1119,19 @@ Instead edit gulp/templates/sprite.css */
 }
 
 .site-header--is-expanded {
-    background-color: rgba(47,85,114, .55);
+    background-color: rgba(47,85,114, 0.55);
   }
 
 @media (min-width: 800px) {
 
 .site-header {
+    position: fixed;
     background-color: rgba(47,85,114, 0.3)
 }
+
+    .site-header--dark {
+      background-color: rgba(23, 51, 72, 1.0);
+    }
   }
 
 @media (min-width: 800px) {
@@ -1142,6 +1147,10 @@ Instead edit gulp/templates/sprite.css */
     left: 50%;
     -webkit-transform: translateX(-50%) scale(.8);
             transform: translateX(-50%) scale(.8);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
     background-color: #2f5572;
@@ -1155,6 +1164,11 @@ Instead edit gulp/templates/sprite.css */
       -webkit-transform: translateX(0) scale(1);
               transform: translateX(0) scale(1)
   }
+
+      .site-header--dark .site-header__logo {
+        -webkit-transform: scale(.57);
+                transform: scale(.57);
+      }
   }
 
 .site-header__logo__graphic {
@@ -1245,8 +1259,8 @@ Instead edit gulp/templates/sprite.css */
     padding-top: 90px;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
     text-align: center;
     z-index: -10;
   }
@@ -1330,7 +1344,7 @@ Instead edit gulp/templates/sprite.css */
     font-weight: 300;
     text-decoration: none;
     display: block;
-    padding: 12px 0;
+    padding: 5px 8px;
     font-size: .8rem;
     background-color: rgba(47,85,114, .5);
   }
@@ -1340,8 +1354,12 @@ Instead edit gulp/templates/sprite.css */
 .primary-nav a {
       font-size: 1rem;
       padding: 12px 0;
-      border-color: transparent
+      background-color: transparent
   }
+
+      .primary-nav a.is-current-link {
+        color: #fabb69;
+      }
   }
 
 .reveal-item {
