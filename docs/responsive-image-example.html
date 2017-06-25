@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Responsive Image Example</title>
+  <link rel="stylesheet" href="temp/styles/styles.css"/>
+</head>
+<body>
+ <h1>Paris Building</h1>
+ <picture>
+    <source media="(min-width: 1200px)" srcset="assets/images/paris-large-w1200.jpg">
+    <source media="(min-width: 760px)" srcset="assets/images/paris-med-w714.jpg">
+    <source media="(min-width: 480px)" srcset="assets/images/paris-small-w425.jpg">
+    <img src="assets/images/paris-smallest-w200.jpg" alt="Some Paris Building">
+    </picture>
+
+<img srcset="images/dog-resolution-small.jgp 570w, images/dog-resolution-medium.jpg 1200w, images/dog-resolution-large.jpg 1920w" alt="Puppy in the sand." />
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laborum esse consequuntur nam ullam, quisquam maxime. Odio veritatis neque hic perspiciatis ad amet, numquam minus debitis magnam quae praesentium dicta.</p>
+</body>
+</html>
